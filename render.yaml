@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: cyberpunk-resume
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: NODE_ENV
+        value: production
+
